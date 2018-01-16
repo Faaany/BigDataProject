@@ -1,0 +1,7 @@
+Data:
+- https://www.kaggle.com/geomack/spotifyclassification/data
+- https://www.kaggle.com/edumucelli/spotifys-worldwide-daily-song-ranking/data
+- https://labrosa.ee.columbia.edu/millionsong/
+
+Maps:
+- http://sensitivecities.com/so-youd-like-to-make-a-map-using-python-EN.html#.Wl4qYkxFy70
