@@ -1,0 +1,1 @@
+hdfs dfs -put ranking_test_data.txt
