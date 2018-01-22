@@ -1,12 +1,15 @@
 class Song:
   def __init__(self, line):
-    data = line.split(",")
-    Position = data[0]
-    Name = data[1]
-    Artist = data[2]
-    Streams = data[3]
-    Date = data[5]
-    Region = data[6]
+    try:
+      data = line.split(",")
+      self.Position = data[0]
+      self.Name = data[1]
+      self.Artist = data[2]
+      self.Streams = data[3]
+      self.Date = data[5]
+      self.Region = data[6]
+    except:
+      pass
   Position = ""
   Name = ""
   Artist = ""

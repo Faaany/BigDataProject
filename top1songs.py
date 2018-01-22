@@ -15,16 +15,15 @@ sc = SparkContext(conf = confCluster, pyFiles=["song.py"])
 #load data
 data = sc.textFile("data.txt")
 #interpret data
-songs = sc.map(lambda line: Song(line))
-line.split(",")
+songs = data.map(lambda line: Song(line))
 
-filtered = songs.filter(lambda x: x.Position == 1)
+filtered = songs.filter(lambda x: x.Position == "1").map(lambda song: song.Name).distinct()
 # write to frontend
 text_file = open("songs.txt", "w")
 for song in filtered.collect():
-  text_file.write(song.name)
+  text_file.write(song.encode("utf8"))
   text_file.write("\n")
 text_file.close()
 # write to HDFS folder
-sc.parallelize([wordcount]).saveAsTextFile("songs")
+#sc.parallelize([filtered]).saveAsTextFile("songs")
 #===========================================================================
