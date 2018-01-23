@@ -17,14 +17,14 @@ data = sc.textFile("data.txt")
 #interpret data
 songs = data.map(lambda line: Song(line))
 
-counts = songs.map(lambda song: song.Artist).map(lambda name: (name,1)).reduceByKey(lambda a,b:a+b).map(lambda x: (x[1],x[0]))
+counts = songs.map(lambda song: song.Artist).map(lambda name: (,name,1)).reduceByKey(lambda a,b:a+b).map(lambda x: (x[1],x[0]))
 
 counts = counts.sortByKey(False)
 
 # write to frontend
 text_file = open("topartists.txt", "w")
 for count in counts.collect():
-  text_file.write(str(count[0])+","+count[1].encode("utf-8"))
+  text_file.write(str(count))
   text_file.write("\n")
 text_file.close()
 # write to HDFS folder
