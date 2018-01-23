@@ -25,7 +25,7 @@ songcount = songcount.sortByKey(False)
 #write top 10 of the longest played songs to frontend
 text_file = open("longest_in_top10_songs.txt", "w")
 for song in songcount.take(10):
-  text_file.write(str(song))
+  text_file.write(str(song[0])+ ", "+song[1].encode("utf8"))
   text_file.write("\n")
 text_file.close()
 # write to HDFS folder
