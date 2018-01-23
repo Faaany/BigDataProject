@@ -22,7 +22,7 @@ counts = songs.map(lambda song: song.Artist).map(lambda name: (name,1)).reduceBy
 counts = counts.sortByKey(False)
 
 # write to frontend
-text_file = open("artists.txt", "w")
+text_file = open("topartists.txt", "w")
 for count in counts.collect():
   text_file.write(str(count))
   text_file.write("\n")
