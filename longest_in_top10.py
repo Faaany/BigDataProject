@@ -1,6 +1,6 @@
 from pyspark import SparkConf, SparkContext
 import re
-from song import Song
+from song import *
 
 #run on cluster
 confCluster = SparkConf()
@@ -16,12 +16,16 @@ sc = SparkContext(conf = confCluster, pyFiles=["song.py"])
 data = sc.textFile("data.txt")
 #interpret data
 songs = data.map(lambda line: Song(line))
-
-filtered = songs.filter(lambda x: x.Position == "1").map(lambda song: song.Name).distinct()
-# write to frontend
-text_file = open("songs.txt", "w")
-for song in filtered.collect():
-  text_file.write(song.encode("utf8"))
+#filter songs in the top 10 and create (name,1) for each song
+songcounts = songs.filter(lambda song: song.Position <= 10).map(lambda song: (song.Name, 1))
+#reduce songcounts
+songcount = songcounts.reduceByKey(lambda x,y: x+y).map(lambda x: (x[1], x[0]))
+#sort keys
+songcount = songcount.sortByKey(False)
+#write top 10 of the longest played songs to frontend
+text_file = open("longest_in_top10_songs.txt", "w")
+for song in songcount.take(10):
+  text_file.write(str(song))
   text_file.write("\n")
 text_file.close()
 # write to HDFS folder
