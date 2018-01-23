@@ -24,7 +24,7 @@ counts = counts.sortByKey(False)
 # write to frontend
 text_file = open("topartists.txt", "w")
 for count in counts.collect():
-  text_file.write(str(count[0])+","+count[1].encode("utf-8"))
+  text_file.write(str(count[0])+", "+count[1].encode("utf-8"))
   text_file.write("\n")
 text_file.close()
 # write to HDFS folder
