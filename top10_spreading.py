@@ -39,7 +39,7 @@ def differences(listing):
 top10_spreading = first_appearance_in_top10.map(lambda x: (x[0], differences(x[1])))
 #write all songs and their time differences
 text_file = open("top10_spreading.txt", "w")
-for song in top10spreading.collect():
+for song in top10_spreading.collect():
   text_file.write(song[0].encode("utf-8") + ": ")
   for date in song[1]:
     text_file.write(str(date)+", ")
