@@ -24,8 +24,8 @@ artists = artists.reduceByKey(lambda a,b:a+b).map(lambda x: (x[1],x[0]))
 artists = artists.sortByKey(False)
 #write all artists
 text_file = open("topartists.txt", "w")
-for song in artists.collect():
-  text_file.write(str(song[0]) + ", " + song[1].encode("utf8"))
+for artist in artists.collect():
+  text_file.write(str(artist[0]) + ", " + artist[1].encode("utf8"))
   text_file.write("\n")
 text_file.close()
 #===========================================================================
