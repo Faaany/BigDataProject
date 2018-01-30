@@ -8,3 +8,4 @@ Solution: `topartists.py`
 5. Which song has the highest streams in the last two years? Solution `top10_streamed_songs.py`
 6. How long time does a top ranking song takes to get to other countries?
 7. In which region do the top 10 change the most? Solution: `most_changing_regions.py`
+8. For which artists is the variance of streams (per day) the lowest?
