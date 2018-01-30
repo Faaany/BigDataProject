@@ -27,10 +27,10 @@ class Song:
       Date = str(self.Date),
       Region = self.Region
     )
-  Position = ""
+  Position = 9999
   Name = ""
   Artist = ""
-  Streams = ""
+  Streams = 0
   URL = ""
   Date = datetime.date(1980,1,1)
   Region = ""
