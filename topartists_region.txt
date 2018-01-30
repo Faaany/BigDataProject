@@ -1,0 +1,46 @@
+:  Wisin  
+ca: Drake
+ie: Ed Sheeran
+gt: Ozuna
+pa: Ozuna
+de: Bonez MC
+id: Ed Sheeran
+my: Ed Sheeran
+is: Aron Can
+nl: Ed Sheeran
+sk: Ed Sheeran
+tr: Sezen Aksu
+lt: Ed Sheeran
+pl: Taco Hemingway
+ee: Ed Sheeran
+ch: Ed Sheeran
+mx: Ed Sheeran
+hu: Ed Sheeran
+co: Ozuna
+es: Ed Sheeran
+us: Drake
+uy: Ed Sheeran
+sg: Ed Sheeran
+jp: ONE OK ROCK
+no: Ed Sheeran
+dk: Ed Sheeran
+ar: Ozuna
+cr: Ed Sheeran
+pe: Ozuna
+it: Ghali
+fr: Damso
+nz: Ed Sheeran
+se: Ed Sheeran
+bo: J Balvin
+cz: Ed Sheeran
+be: Ed Sheeran
+cl: Ozuna
+at: Ed Sheeran
+hn: Ozuna
+br: Matheus & Kauan
+ec: Ed Sheeran
+pt: Ed Sheeran
+ph: Ed Sheeran
+fi: JVG
+sv: Ozuna
+tw: Ed Sheeran
