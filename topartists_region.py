@@ -17,7 +17,7 @@ data = sc.textFile("data.txt")
 #interpret data
 songs = data.map(lambda line: Song(line))
 
-
+#group data by region
 regions = songs.groupBy(lambda song: song.Region).collect()
 
 text_file = open("topartists_region.txt","w")
