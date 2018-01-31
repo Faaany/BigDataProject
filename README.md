@@ -1,6 +1,6 @@
 # BigDataProject
 
-This repository is for cooperation of our big data project within the "Big Data" course. We used Spark to analyse 
+This repository is for collaboration of our big data project within the "Big Data" course. We used Spark to analyse 
 spotify top100 dataset. The questions we are trying to answer are as below:
 
 1. Which artist has the most top-rankings? 
