@@ -22,7 +22,7 @@ top10streams = songs.map(lambda song: (song.Name, song.Streams)).reduceByKey(lam
 top10streams = top10streams.sortByKey(False)
 #write all songs and the number of their streams
 text_file = open("top10_streamed_songs.txt", "w")
-for song in top10streams.collect():
+for song in top10streams.take(10):
   text_file.write(str(song[0]) + ", " + song[1].encode("utf-8"))
   text_file.write("\n")
 text_file.close()
